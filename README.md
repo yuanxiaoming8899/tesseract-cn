@@ -1,134 +1,120 @@
-# Tesseract OCR
+<div class="Box-sc-g0xbh4-0 bJMeLZ js-snippet-clipboard-copy-unpositioned" data-hpc="true"><article class="markdown-body entry-content container-lg" itemprop="text"><div class="markdown-heading" dir="auto"><h1 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">超立方 OCR</font></font></h1><a id="user-content-tesseract-ocr" class="anchor" aria-label="永久链接：Tesseract OCR" href="#tesseract-ocr"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><a href="https://ci.appveyor.com/project/zdenop/tesseract/" rel="nofollow"><img src="https://camo.githubusercontent.com/19e120b19270b1becea099e91974144469cf61f61ae8210d000f1250e28fec6e/68747470733a2f2f63692e6170707665796f722e636f6d2f6170692f70726f6a656374732f7374617475732f6d69616830696b667366306a333831392f6272616e63682f6d61737465723f7376673d74727565" alt="构建状态" data-canonical-src="https://ci.appveyor.com/api/projects/status/miah0ikfsf0j3819/branch/master?svg=true" style="max-width: 100%;"></a>
+<a href="https://github.com/tesseract-ocr/tesseract/actions/workflows/sw.yml"><img src="https://github.com/tesseract-ocr/tesseract/actions/workflows/sw.yml/badge.svg" alt="构建状态" style="max-width: 100%;"></a><br>
+<a href="https://scan.coverity.com/projects/tesseract-ocr" rel="nofollow"><img src="https://camo.githubusercontent.com/0bed0e76713a73f2236203e4a8768f7bc31d29f2dac63db5722080f0d486e064/68747470733a2f2f7363616e2e636f7665726974792e636f6d2f70726f6a656374732f7465737365726163742d6f63722f62616467652e737667" alt="Coverity 扫描构建状态" data-canonical-src="https://scan.coverity.com/projects/tesseract-ocr/badge.svg" style="max-width: 100%;"></a>
+<a href="https://github.com/tesseract-ocr/tesseract/security/code-scanning"><img src="https://github.com/tesseract-ocr/tesseract/workflows/CodeQL/badge.svg" alt="代码QL" style="max-width: 100%;"></a>
+<a href="https://bugs.chromium.org/p/oss-fuzz/issues/list?sort=-opened&amp;can=2&amp;q=proj:tesseract-ocr" rel="nofollow"><img src="https://camo.githubusercontent.com/796fab7cd575cdf780c5fc036ffe1bff0b84a2bc62a03b0f0aec0d1d44cf6c49/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6f73732d2d66757a7a2d66757a7a696e672d627269676874677265656e" alt="OSS-模糊" data-canonical-src="https://img.shields.io/badge/oss--fuzz-fuzzing-brightgreen" style="max-width: 100%;"></a>
+<br>
+<a href="https://raw.githubusercontent.com/tesseract-ocr/tesseract/main/LICENSE" rel="nofollow"><img src="https://camo.githubusercontent.com/216e9b944a9edc1ba66ea58c8547654dbec223e89a8eee3e7331216c0d59f4ec/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f6c6963656e73652d4170616368652d2d322e302d626c75652e737667" alt="GitHub 许可证" data-canonical-src="https://img.shields.io/badge/license-Apache--2.0-blue.svg" style="max-width: 100%;"></a>
+<a href="https://github.com/tesseract-ocr/tesseract/releases/"><img src="https://camo.githubusercontent.com/3b246f2d8e0fecfa38775d87d00c82c940a32270b4e08b8af82afc3ed6194360/68747470733a2f2f696d672e736869656c64732e696f2f62616467652f646f776e6c6f61642d616c6c25323072656c65617365732d627269676874677265656e2e737667" alt="下载" data-canonical-src="https://img.shields.io/badge/download-all%20releases-brightgreen.svg" style="max-width: 100%;"></a></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">目录</font></font></h2><a id="user-content-table-of-contents" class="anchor" aria-label="固定链接：目录" href="#table-of-contents"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<ul dir="auto">
+<li><a href="#tesseract-ocr"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">超立方 OCR</font></font></a>
+<ul dir="auto">
+<li><a href="#about"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">关于</font></font></a></li>
+<li><a href="#brief-history"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">历史简介</font></font></a></li>
+<li><a href="#installing-tesseract"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装超立方体</font></font></a></li>
+<li><a href="#running-tesseract"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">运行超立方体</font></font></a></li>
+<li><a href="#for-developers"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于开发商</font></font></a></li>
+<li><a href="#support"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持</font></font></a></li>
+<li><a href="#license"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">执照</font></font></a></li>
+<li><a href="#dependencies"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">依赖关系</font></font></a></li>
+<li><a href="#latest-version-of-readme"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">最新版本的自述文件</font></font></a></li>
+</ul>
+</li>
+</ul>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">关于</font></font></h2><a id="user-content-about" class="anchor" aria-label="永久链接：关于" href="#about"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">该软件包包含一个</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OCR 引擎</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">-</font></font><code>libtesseract</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和一个</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">命令行程序</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">- </font></font><code>tesseract</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tesseract 4 添加了一个新的基于神经网络 (LSTM) 的</font></font><a href="https://en.wikipedia.org/wiki/Optical_character_recognition" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">OCR 引擎</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，该引擎专注于线条识别，但仍然支持 Tesseract 3 的传统 Tesseract OCR 引擎，该引擎通过识别字符模式进行工作。</font><font style="vertical-align: inherit;">通过使用旧版 OCR 引擎模式 (--oem 0) 可以实现与 Tesseract 3 的兼容性。</font><font style="vertical-align: inherit;">它还需要支持旧引擎的</font></font><a href="https://tesseract-ocr.github.io/tessdoc/Data-Files.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">经过训练的数据</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文件，例如来自</font></font><a href="https://github.com/tesseract-ocr/tessdata"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">tessdata</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">存储库的数据文件。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Stefan Weil 是现任首席开发人员。</font><font style="vertical-align: inherit;">Ray Smith 在 2018 年之前一直是首席开发人员。维护者是 Zdenko Podobny。</font><font style="vertical-align: inherit;">有关贡献者列表，请参阅</font></font><a href="https://github.com/tesseract-ocr/tesseract/blob/main/AUTHORS"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">作者</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+和 GitHub 的</font></font><a href="https://github.com/tesseract-ocr/tesseract/graphs/contributors"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">贡献者</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">日志。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tesseract</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持 unicode (UTF-8)</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，并且可以</font><font style="vertical-align: inherit;">“开箱即用”</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">识别</font></font><a href="https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">100 多种语言。</font></font></a></strong><font style="vertical-align: inherit;"></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tesseract 支持</font></font><strong><a href="https://tesseract-ocr.github.io/tessdoc/InputFormats" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">多种图像格式</font></font></a></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，包括 PNG、JPEG 和 TIFF。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tesseract 支持</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">各种输出格式</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：纯文本、hOCR (HTML)、PDF、仅不可见文本的 PDF、TSV 和 ALTO。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您应该注意，在许多情况下，为了获得更好的 OCR 结果，您需要提高</font><font style="vertical-align: inherit;">提供给 Tesseract 的</font><strong><font style="vertical-align: inherit;">图像</font></strong></font><strong><a href="https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">质量。</font></font></a><font style="vertical-align: inherit;"></font></strong><font style="vertical-align: inherit;"></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">该项目</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">不包括 GUI 应用程序</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">如果您需要，请参阅</font></font><a href="https://tesseract-ocr.github.io/tessdoc/User-Projects-%E2%80%93-3rdParty.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">3rdParty</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">可以训练Tesseract</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">识别其他语言</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font><font style="vertical-align: inherit;">有关更多信息，</font><font style="vertical-align: inherit;">请参阅</font></font><a href="https://tesseract-ocr.github.io/tessdoc/Training-Tesseract.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tesseract 培训。</font></font></a><font style="vertical-align: inherit;"></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">历史简介</font></font></h2><a id="user-content-brief-history" class="anchor" aria-label="永久链接：简史" href="#brief-history"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tesseract 最初于 1985 年至 1994 年间在英国布里斯托尔惠普实验室和美国科罗拉多州格里利市惠普公司开发，并于 1996 年进行了一些更改以移植到 Windows，并于 1998 年进行了一些 C++ 化。2005 年 Tesseract是由 HP 开源的。</font><font style="vertical-align: inherit;">从 2006 年到 2018 年 11 月，它由 Google 开发。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">主要版本 5 是当前的稳定版本，从 2021 年 11 月 30 日发布
+</font></font><a href="https://github.com/tesseract-ocr/tesseract/releases/tag/5.0.0"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">5.0.0开始。可从</font></font></a><font style="vertical-align: inherit;"></font><a href="https://github.com/tesseract-ocr/tesseract/releases/"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GitHub</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">获取较新的次要版本和错误修复版本
+</font><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">最新的源代码可从</font></font><a href="https://github.com/tesseract-ocr/tesseract/tree/main"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">GitHub 上的主分支</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">获取。</font></font><a href="https://github.com/tesseract-ocr/tesseract/issues"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">未解决的问题可以在问题跟踪器</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和</font></font><a href="https://tesseract-ocr.github.io/tessdoc/Planning.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">规划文档</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中找到</font><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关版本的更多详细信息，</font><font style="vertical-align: inherit;">请参阅</font></font><strong><a href="https://tesseract-ocr.github.io/tessdoc/ReleaseNotes.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">发行说明</font></font></a></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+和</font></font><strong><a href="https://github.com/tesseract-ocr/tesseract/blob/main/ChangeLog"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">更改日志。</font></font></a></strong><font style="vertical-align: inherit;"></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">安装超立方体</font></font></h2><a id="user-content-installing-tesseract" class="anchor" aria-label="永久链接：安装 Tesseract" href="#installing-tesseract"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">您可以</font></font><a href="https://tesseract-ocr.github.io/tessdoc/Installation.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">通过预构建的二进制包安装 Tesseract</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+或</font></font><a href="https://tesseract-ocr.github.io/tessdoc/Compiling.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">从源代码构建它</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"></font><a href="https://tesseract-ocr.github.io/tessdoc/supported-compilers.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在从源代码构建 Tesseract 之前，请检查您的系统是否有一个编译器，该编译器是受支持的编译器</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">之一</font><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">运行超立方体</font></font></h2><a id="user-content-running-tesseract" class="anchor" aria-label="永久链接：运行 Tesseract" href="#running-tesseract"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">基本</font></font><strong><a href="https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">命令行用法</font></font></a></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：</font></font></p>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>tesseract imagename outputbase [-l lang] [--oem ocrenginemode] [--psm pagesegmode] [configfiles...]
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="tesseract imagename outputbase [-l lang] [--oem ocrenginemode] [--psm pagesegmode] [configfiles...]" tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关各种命令行选项的更多信息，请使用</font></font><code>tesseract --help</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">或</font></font><code>man tesseract</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"></font><a href="https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html#simplest-invocation-to-ocr-an-image" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">示例可以在文档</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">中找到</font><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">对于开发商</font></font></h2><a id="user-content-for-developers" class="anchor" aria-label="永久链接：对于开发人员" href="#for-developers"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">开发人员可以使用</font></font><code>libtesseract</code> <a href="https://github.com/tesseract-ocr/tesseract/blob/main/include/tesseract/capi.h"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">C</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">或
+</font></font><a href="https://github.com/tesseract-ocr/tesseract/blob/main/include/tesseract/baseapi.h"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">C++</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> API来构建自己的应用程序。</font><font style="vertical-align: inherit;">如果您需要绑定</font></font><code>libtesseract</code><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">其他编程语言，请参阅
+</font><font style="vertical-align: inherit;">附加组件文档中的</font></font><a href="https://tesseract-ocr.github.io/tessdoc/AddOns.html#tesseract-wrappers" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">包装器部分。</font></font></a><font style="vertical-align: inherit;"></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">doxygen 从源代码生成 Tesseract 的文档可以在</font></font><a href="https://tesseract-ocr.github.io/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">tesseract-ocr.github.io</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">上找到。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">支持</font></font></h2><a id="user-content-support" class="anchor" aria-label="永久链接： 支持" href="#support"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">在提交问题之前，请查看</font></font><strong><a href="https://github.com/tesseract-ocr/tesseract/blob/main/CONTRIBUTING.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">此存储库的指南</font></font></a></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">如需支持，请首先阅读</font></font><a href="https://tesseract-ocr.github.io/tessdoc/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">文档</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，特别是常见问题</font></font><a href="https://tesseract-ocr.github.io/tessdoc/FAQ.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">解答</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，看看您的问题是否已得到解决。</font><font style="vertical-align: inherit;">如果没有，请搜索</font></font><a href="https://groups.google.com/g/tesseract-ocr" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tesseract 用户论坛</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、</font></font><a href="https://groups.google.com/g/tesseract-dev" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tesseract 开发者论坛</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和</font></font><a href="https://github.com/tesseract-ocr/tesseract/issues"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">过去的问题</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，如果您仍然找不到所需的内容，请在邮件列表中寻求支持。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">邮件列表：</font></font></p>
+<ul dir="auto">
+<li><a href="https://groups.google.com/g/tesseract-ocr" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">tesseract-ocr</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 对于 tesseract 用户。</font></font></li>
+<li><a href="https://groups.google.com/g/tesseract-dev" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">tesseract-dev</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;"> - 对于 tesseract 开发人员。</font></font></li>
+</ul>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">请仅报告错误，</font></font><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">而</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">不是提出问题。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">执照</font></font></h2><a id="user-content-license" class="anchor" aria-label="永久链接：许可证" href="#license"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<div class="snippet-clipboard-content notranslate position-relative overflow-auto"><pre class="notranslate"><code>The code in this repository is licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-[![Build status](https://ci.appveyor.com/api/projects/status/miah0ikfsf0j3819/branch/master?svg=true)](https://ci.appveyor.com/project/zdenop/tesseract/)
-[![Build status](https://github.com/tesseract-ocr/tesseract/actions/workflows/sw.yml/badge.svg)](https://github.com/tesseract-ocr/tesseract/actions/workflows/sw.yml)\
-[![Coverity Scan Build Status](https://scan.coverity.com/projects/tesseract-ocr/badge.svg)](https://scan.coverity.com/projects/tesseract-ocr)
-[![CodeQL](https://github.com/tesseract-ocr/tesseract/workflows/CodeQL/badge.svg)](https://github.com/tesseract-ocr/tesseract/security/code-scanning)
-[![OSS-Fuzz](https://img.shields.io/badge/oss--fuzz-fuzzing-brightgreen)](https://bugs.chromium.org/p/oss-fuzz/issues/list?sort=-opened&can=2&q=proj:tesseract-ocr)
-\
-[![GitHub license](https://img.shields.io/badge/license-Apache--2.0-blue.svg)](https://raw.githubusercontent.com/tesseract-ocr/tesseract/main/LICENSE)
-[![Downloads](https://img.shields.io/badge/download-all%20releases-brightgreen.svg)](https://github.com/tesseract-ocr/tesseract/releases/)
+   http://www.apache.org/licenses/LICENSE-2.0
 
-## Table of Contents
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+</code></pre><div class="zeroclipboard-container">
+    <clipboard-copy aria-label="Copy" class="ClipboardButton btn btn-invisible js-clipboard-copy m-2 p-0 tooltipped-no-delay d-flex flex-justify-center flex-items-center" data-copy-feedback="Copied!" data-tooltip-direction="w" value="The code in this repository is licensed under the Apache License, Version 2.0 (the &quot;License&quot;);
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
 
-* [Tesseract OCR](#tesseract-ocr)
-  * [About](#about)
-  * [Brief history](#brief-history)
-  * [Installing Tesseract](#installing-tesseract)
-  * [Running Tesseract](#running-tesseract)
-  * [For developers](#for-developers)
-  * [Support](#support)
-  * [License](#license)
-  * [Dependencies](#dependencies)
-  * [Latest Version of README](#latest-version-of-readme)
+   http://www.apache.org/licenses/LICENSE-2.0
 
-## About
-
-This package contains an **OCR engine** - `libtesseract` and a **command line program** - `tesseract`.
-
-Tesseract 4 adds a new neural net (LSTM) based [OCR engine](https://en.wikipedia.org/wiki/Optical_character_recognition) which is focused on line recognition, but also still supports the legacy Tesseract OCR engine of Tesseract 3 which works by recognizing character patterns. Compatibility with Tesseract 3 is enabled by using the Legacy OCR Engine mode (--oem 0).
-It also needs [traineddata](https://tesseract-ocr.github.io/tessdoc/Data-Files.html) files which support the legacy engine, for example those from the [tessdata](https://github.com/tesseract-ocr/tessdata) repository.
-
-Stefan Weil is the current lead developer. Ray Smith was the lead developer until 2018. The maintainer is Zdenko Podobny. For a list of contributors see [AUTHORS](https://github.com/tesseract-ocr/tesseract/blob/main/AUTHORS)
-and GitHub's log of [contributors](https://github.com/tesseract-ocr/tesseract/graphs/contributors).
-
-Tesseract has **unicode (UTF-8) support**, and can **recognize [more than 100 languages](https://tesseract-ocr.github.io/tessdoc/Data-Files-in-different-versions.html)** "out of the box".
-
-Tesseract supports **[various image formats](https://tesseract-ocr.github.io/tessdoc/InputFormats)** including PNG, JPEG and TIFF.
-
-Tesseract supports **various output formats**: plain text, hOCR (HTML), PDF, invisible-text-only PDF, TSV and ALTO.
-
-You should note that in many cases, in order to get better OCR results, you'll need to **[improve the quality](https://tesseract-ocr.github.io/tessdoc/ImproveQuality.html) of the image** you are giving Tesseract.
-
-This project **does not include a GUI application**. If you need one, please see the [3rdParty](https://tesseract-ocr.github.io/tessdoc/User-Projects-%E2%80%93-3rdParty.html) documentation.
-
-Tesseract **can be trained to recognize other languages**.
-See [Tesseract Training](https://tesseract-ocr.github.io/tessdoc/Training-Tesseract.html) for more information.
-
-## Brief history
-
-Tesseract was originally developed at Hewlett-Packard Laboratories Bristol UK and at Hewlett-Packard Co, Greeley Colorado USA between 1985 and 1994, with some more changes made in 1996 to port to Windows, and some C++izing in 1998. In 2005 Tesseract was open sourced by HP. From 2006 until November 2018 it was developed by Google.
-
-Major version 5 is the current stable version and started with release
-[5.0.0](https://github.com/tesseract-ocr/tesseract/releases/tag/5.0.0) on November 30, 2021. Newer minor versions and bugfix versions are available from
-[GitHub](https://github.com/tesseract-ocr/tesseract/releases/).
-
-Latest source code is available from [main branch on GitHub](https://github.com/tesseract-ocr/tesseract/tree/main).
-Open issues can be found in [issue tracker](https://github.com/tesseract-ocr/tesseract/issues),
-and [planning documentation](https://tesseract-ocr.github.io/tessdoc/Planning.html).
-
-See **[Release Notes](https://tesseract-ocr.github.io/tessdoc/ReleaseNotes.html)**
-and **[Change Log](https://github.com/tesseract-ocr/tesseract/blob/main/ChangeLog)** for more details of the releases.
-
-## Installing Tesseract
-
-You can either [Install Tesseract via pre-built binary package](https://tesseract-ocr.github.io/tessdoc/Installation.html)
-or [build it from source](https://tesseract-ocr.github.io/tessdoc/Compiling.html).
-
-Before building Tesseract from source, please check that your system has a compiler which is one of the [supported compilers](https://tesseract-ocr.github.io/tessdoc/supported-compilers.html).
-
-## Running Tesseract
-
-Basic **[command line usage](https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html)**:
-
-    tesseract imagename outputbase [-l lang] [--oem ocrenginemode] [--psm pagesegmode] [configfiles...]
-
-For more information about the various command line options use `tesseract --help` or `man tesseract`.
-
-Examples can be found in the [documentation](https://tesseract-ocr.github.io/tessdoc/Command-Line-Usage.html#simplest-invocation-to-ocr-an-image).
-
-## For developers
-
-Developers can use `libtesseract` [C](https://github.com/tesseract-ocr/tesseract/blob/main/include/tesseract/capi.h) or
-[C++](https://github.com/tesseract-ocr/tesseract/blob/main/include/tesseract/baseapi.h) API to build their own application. If you need bindings to `libtesseract` for other programming languages, please see the
-[wrapper](https://tesseract-ocr.github.io/tessdoc/AddOns.html#tesseract-wrappers) section in the AddOns documentation.
-
-Documentation of Tesseract generated from source code by doxygen can be found on [tesseract-ocr.github.io](https://tesseract-ocr.github.io/).
-
-## Support
-
-Before you submit an issue, please review **[the guidelines for this repository](https://github.com/tesseract-ocr/tesseract/blob/main/CONTRIBUTING.md)**.
-
-For support, first read the [documentation](https://tesseract-ocr.github.io/tessdoc/),
-particularly the [FAQ](https://tesseract-ocr.github.io/tessdoc/FAQ.html) to see if your problem is addressed there.
-If not, search the [Tesseract user forum](https://groups.google.com/g/tesseract-ocr), the [Tesseract developer forum](https://groups.google.com/g/tesseract-dev) and [past issues](https://github.com/tesseract-ocr/tesseract/issues), and if you still can't find what you need, ask for support in the mailing-lists.
-
-Mailing-lists:
-
-* [tesseract-ocr](https://groups.google.com/g/tesseract-ocr) - For tesseract users.
-* [tesseract-dev](https://groups.google.com/g/tesseract-dev) - For tesseract developers.
-
-Please report an issue only for a **bug**, not for asking questions.
-
-## License
-
-    The code in this repository is licensed under the Apache License, Version 2.0 (the "License");
-    you may not use this file except in compliance with the License.
-    You may obtain a copy of the License at
-
-       http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.
-
-**NOTE**: This software depends on other packages that may be licensed under different open source licenses.
-
-Tesseract uses [Leptonica library](http://leptonica.com/) which essentially
-uses a [BSD 2-clause license](http://leptonica.com/about-the-license.html).
-
-## Dependencies
-
-Tesseract uses [Leptonica library](https://github.com/DanBloomberg/leptonica)
-for opening input images (e.g. not documents like pdf).
-It is suggested to use leptonica with built-in support for [zlib](https://zlib.net),
-[png](https://sourceforge.net/projects/libpng) and
-[tiff](http://www.simplesystems.org/libtiff) (for multipage tiff).
-
-## Latest Version of README
-
-For the latest online version of the README.md see:
-
-<https://github.com/tesseract-ocr/tesseract/blob/main/README.md>
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an &quot;AS IS&quot; BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License." tabindex="0" role="button">
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-copy js-clipboard-copy-icon">
+    <path d="M0 6.75C0 5.784.784 5 1.75 5h1.5a.75.75 0 0 1 0 1.5h-1.5a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-1.5a.75.75 0 0 1 1.5 0v1.5A1.75 1.75 0 0 1 9.25 16h-7.5A1.75 1.75 0 0 1 0 14.25Z"></path><path d="M5 1.75C5 .784 5.784 0 6.75 0h7.5C15.216 0 16 .784 16 1.75v7.5A1.75 1.75 0 0 1 14.25 11h-7.5A1.75 1.75 0 0 1 5 9.25Zm1.75-.25a.25.25 0 0 0-.25.25v7.5c0 .138.112.25.25.25h7.5a.25.25 0 0 0 .25-.25v-7.5a.25.25 0 0 0-.25-.25Z"></path>
+</svg>
+      <svg aria-hidden="true" height="16" viewBox="0 0 16 16" version="1.1" width="16" data-view-component="true" class="octicon octicon-check js-clipboard-check-icon color-fg-success d-none">
+    <path d="M13.78 4.22a.75.75 0 0 1 0 1.06l-7.25 7.25a.75.75 0 0 1-1.06 0L2.22 9.28a.751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018L6 10.94l6.72-6.72a.75.75 0 0 1 1.06 0Z"></path>
+</svg>
+    </clipboard-copy>
+  </div></div>
+<p dir="auto"><strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">注意</font></font></strong><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">：该软件依赖于可能根据不同开源许可证获得许可的其他软件包。</font></font></p>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tesseract 使用</font></font><a href="http://leptonica.com/" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Leptonica 库</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">，该库本质上使用</font></font><a href="http://leptonica.com/about-the-license.html" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">BSD 2-clause 许可证</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">依赖关系</font></font></h2><a id="user-content-dependencies" class="anchor" aria-label="永久链接：依赖关系" href="#dependencies"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Tesseract 使用</font></font><a href="https://github.com/DanBloomberg/leptonica"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">Leptonica 库</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">
+来打开输入图像（例如，不是 pdf 等文档）。</font><font style="vertical-align: inherit;">建议使用内置支持</font></font><a href="https://zlib.net" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">zlib</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">、
+ </font></font><a href="https://sourceforge.net/projects/libpng" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">png</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">和
+</font></font><a href="http://www.simplesystems.org/libtiff" rel="nofollow"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">tiff</font></font></a><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">（对于多页 tiff ）的 leptonica 。</font></font></p>
+<div class="markdown-heading" dir="auto"><h2 tabindex="-1" class="heading-element" dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">最新版本的自述文件</font></font></h2><a id="user-content-latest-version-of-readme" class="anchor" aria-label="永久链接：最新版本的自述文件" href="#latest-version-of-readme"><svg class="octicon octicon-link" viewBox="0 0 16 16" version="1.1" width="16" height="16" aria-hidden="true"><path d="m7.775 3.275 1.25-1.25a3.5 3.5 0 1 1 4.95 4.95l-2.5 2.5a3.5 3.5 0 0 1-4.95 0 .751.751 0 0 1 .018-1.042.751.751 0 0 1 1.042-.018 1.998 1.998 0 0 0 2.83 0l2.5-2.5a2.002 2.002 0 0 0-2.83-2.83l-1.25 1.25a.751.751 0 0 1-1.042-.018.751.751 0 0 1-.018-1.042Zm-4.69 9.64a1.998 1.998 0 0 0 2.83 0l1.25-1.25a.751.751 0 0 1 1.042.018.751.751 0 0 1 .018 1.042l-1.25 1.25a3.5 3.5 0 1 1-4.95-4.95l2.5-2.5a3.5 3.5 0 0 1 4.95 0 .751.751 0 0 1-.018 1.042.751.751 0 0 1-1.042.018 1.998 1.998 0 0 0-2.83 0l-2.5 2.5a1.998 1.998 0 0 0 0 2.83Z"></path></svg></a></div>
+<p dir="auto"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">有关 README.md 的最新在线版本，请参阅：</font></font></p>
+<p dir="auto"><a href="https://github.com/tesseract-ocr/tesseract/blob/main/README.md"><font style="vertical-align: inherit;"><font style="vertical-align: inherit;">https://github.com/tesseract-ocr/tesseract/blob/main/README.md</font></font></a></p>
+</article></div>
